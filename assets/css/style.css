@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&family=Unbounded:wght@200..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Unbounded', sans-serif;
+    background-color: #fffdf3;
+}
+
+input, button {
+    font-family: 'Unbounded', sans-serif;
+}
+
+input::placeholder {
+    font-family: 'Unbounded', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 24px;
+
+    width: 100%;
+
+    z-index: 101;
+    height: 50px;
+}
+
+.header-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+}
+
+.header-nav{
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+}
+
+.header-nav__a {
+    transition: all 0.3s ease-in-out;
+}
+
+.header-nav__a:hover {
+    color: rgb(28, 128, 71);
+}
+
+.header-burger {
+    display: none;
+}
+
+.header-modal {
+    display: none;
+}
+
+.header-modal.active {
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* только со свойством позишн: */
+    z-index: 100;
+
+    display: none;
+
+    animation: fadeIn 0.3s ease-in-out;
+
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-1000px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.overlay.active {
+    display: block;
+}
+
+.header-modal__wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 96px;
+
+    gap: 24px;
+}
+
+/* .header-modal__close {
+    display: none;
+}
+
+.header-modal__close.active {
+    display: block;
+} */
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-wrapper {
+    margin-top: 128px;
+    height: 80vh;
+}
+
+.swiper-slide {
+    background: #828282;
+    border-radius: 16px;
+}
+
+@media (max-width: 1440px) {
+
+    .container {
+        padding: 0 24px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header-nav, .header-icons {
+        display: none;
+    }
+
+    .header-burger {
+        display: block;
+        cursor: pointer;
+    }
+
+}
