@@ -1,29 +1,36 @@
 const init = () => {
-    headerModal();
-    swiper();
+    headerModal()
+    swiper()
+    headerBcc()
 }
 
 
 const headerModal = () => {
     
-    const headerBurger = document.querySelector('.header-modal__open');
-    if(!headerBurger) return false;
+    const headerBurger = document.querySelectorAll(".header-modal__icons");
 
-    const headerModalEl = document.querySelector('.header-modal');
-    if(!headerModal) return false;
+    const headerModalEl = document.querySelector(".header-modal");
 
     const overlayEl = document.querySelector('.overlay')
-    if(!overlayEl) return false;
     
-    // const headerClose = document.querySelector('.header-modal__close');
-    // if(!headerClose) return false;
+    const headerClose = document.querySelector(".header-modal__icons.close");
+
+    const headerOpen = document.querySelector(".header-modal__icons.open");
+
+    const bodyEl = document.querySelector ("body");
+
+    if (!headerBurger || !headerModalEl || !overlayEl || !headerClose || !headerOpen || !bodyEl) return false
 
 
-    headerBurger.addEventListener('click', () => {
-        headerModalEl.classList.toggle('active');
-        overlayEl.classList.toggle('active');
-        // headerClose.classList.toggle('active');
-    })
+    headerBurger.forEach(burger => {
+        burger.addEventListener('click', () => {
+            headerModalEl.classList.toggle('active');
+            overlayEl.classList.toggle('active');
+            headerClose.classList.toggle('active');
+            headerOpen.classList.toggle('active');
+            bodyEl.classList.toggle("active");
+        })
+    });
 }
 
 const swiper = () => {
@@ -40,6 +47,23 @@ const swiper = () => {
             clickable: true,
         }
     });
+
+}
+
+const headerBcc = () => {
+    
+    const headerEl = document.querySelector("header");
+    console.log(headerEl);
+
+    if (!headerEl) return false
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > window.innerHeight/2) {
+            headerEl.style.backgroundColor = "#828282"
+        } else {
+            headerEl.style.backgroundColor = "transparent"
+        }
+    })
 
 }
 document.addEventListener('DOMContentLoaded', init);
