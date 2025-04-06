@@ -39,7 +39,8 @@ const swiper = () => {
         spaceBetween: 30,
         centeredSlides: true,
         autoplay: {
-            delay: 2500,
+            // delay: 2500,
+            delay: 2500000000000,
             disableOnInteraction: false,
         },
         pagination: {
@@ -53,15 +54,20 @@ const swiper = () => {
 const headerBcc = () => {
     
     const headerEl = document.querySelector("header");
-    console.log(headerEl);
-
-    if (!headerEl) return false
+    const headerIcons = document.querySelector(".fa-basket-shopping")
+    
+    if (!headerEl || !headerIcons) return false
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > window.innerHeight/2) {
-            headerEl.style.backgroundColor = "#828282"
+        if (window.scrollY > window.innerHeight/6) {
+            headerEl.style.backgroundColor = "#2C3531"
+            headerEl.style.color = "#fff"
+            headerIcons.style.color = "#fff"
+
         } else {
             headerEl.style.backgroundColor = "transparent"
+            headerEl.style.color = "#000"
+            headerIcons.style.color = "#000"
         }
     })
 
