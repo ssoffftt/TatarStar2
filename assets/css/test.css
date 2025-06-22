@@ -1,0 +1,14 @@
+@keyframes circle-to-circle  {
+    0%{
+        background-color:aquamarine;
+    }
+    50%{
+        background-color:rgb(218, 196, 0);
+    }
+    100%{
+        background-color:rgb(242, 1, 1);
+    }
+}
+.container {
+    animation: circle-to-circle 0.5s ease-in-out;
+}

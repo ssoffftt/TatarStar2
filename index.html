@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="shortcut icon" href="./assets/image/logo/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/index.js" defer></script>
     <title>TatarStar</title>
@@ -23,7 +24,7 @@
             <nav class="header-nav">
             
                 <a href="#" class="header-nav__a">Главная</a>
-                <a href="#" class="header-nav__a">Каталог</a>
+                <a href="./pajes/category.html" class="header-nav__a">Каталог</a>
                 <a href="#new" class="header-nav__a">Новинки</a>
                 <a href="#" class="header-nav__a">Контакты</a>
                 
@@ -60,12 +61,20 @@
                         <img src="./assets/image/slider/slider6.webp" alt="fashion">
                     </div>
                     <div class="swiper-slide">
-                        <img src="./assets/image/slider/slider6.webp" alt="fashion">
+                        <img src="./assets/image/slider/slider1.jpg" alt="fashion">
                     </div>
-                    <div class="swiper-slide">Slide 3</div>
-                    <div class="swiper-slide">Slide 4</div>
-                    <div class="swiper-slide">Slide 5</div>
-                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">
+                        <img src="./assets/image/slider/slider2.jpg" alt="fashion">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/image/slider/slider3.jpg" alt="fashion">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/image/slider/slider4.jpg" alt="fashion">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/image/slider/slider5.jpeg" alt="fashion">
+                    </div>
 
                 </div>
 
@@ -88,7 +97,7 @@
 
             <div class="new-card">
 
-                <img src="./assets/image/new/new1.avif" alt="платье" class="new-img">
+                <img src="./assets/image/new/new1.avif" alt="платье" class="new-img" >
                 <div class="new-title">Платье</div>
                 <div class="new-price">1044000 руб</div>
 
@@ -571,8 +580,8 @@
                 <div class="footer-col__links">
 
                     <a href="#" class="footer-col__a">Главная</a>
-                    <a href="#" class="footer-col__a">Каталог</a>
-                    <a href="#" class="footer-col__a">Новинки</a>
+                    <a href="../pajes/category.html" class="footer-col__a">Каталог</a>
+                    <a href="#new" class="footer-col__a">Новинки</a>
                     <a href="#" class="footer-col__a">Контакты</a>
 
                 </div>
@@ -591,8 +600,6 @@
                 </div>
 
             </div>
-            
-            <!-- <div class="footer-col"></div>  -->
 
         </div>
 
@@ -605,7 +612,7 @@
             <div class="header-modal__wrapper container">
                 
                     <a href="#" class="header-nav__a">Главная</a>
-                    <a href="#" class="header-nav__a">Каталог</a>
+                    <a href="/pajes/category.html" class="header-nav__a">Каталог</a>
                     <a href="#" class="header-nav__a">Новинки</a>
                     <a href="#" class="header-nav__a">Контакты</a>
                     <a href="#" class="header-nav__a">Корзина</a>
@@ -613,8 +620,72 @@
             </div>
     
         </div>
+<!-- 
+        <div class="new-modal">
+
+            <div class="new-modal_wrapper container">
+                <span class="close">&times;</span>
+                <img src="./assets/image/new/new1.avif" alt="платье">
+            </div>
+            
+        </div> -->
+
         
+        <!-- <div id="modal" class="new-modal" onclick="closeModal(event)">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal(event)">&times;</span>
+                <img id="modalImage" src="" alt="Увеличенное изображение">
+            </div>
+        </div> -->
     </div>
+
+    <div class="popup-overlay">
+        <h1 class="popup-close">x</h1>
+        <div class="popup-content">
+            <img src="" alt="Увеличенное фото" class="popup-image">
+        </div>
+
+    </div>
+
+<div class="cart-overlay">
+    <div class="cart-modal">
+        <div class="cart-header">
+            <h2><span class="cart-title">КОРЗИНА</span> / <span class="cart-count">1 шт.</span></h2>
+            <span class="cart-close">&times;</span>
+        </div>
+        
+        <div class="cart-content">
+            <div class="cart-item">
+                <img src="./assets/image/new/new2.webp" alt="Товар" class="cart-item__image">
+                <div class="cart-item__info">
+                    <p class="cart-item__category">Женская одежда</p>
+                    <h3>FOR ME BY TatarStar</h3>
+                    <p class="cart-item__variant">01.moon grass</p>
+                    <span class="cart-item__volume">Размер: M</span>
+                </div>
+                <span class="cart-item__price">590 ₽</span>
+            </div>
+            
+            <div class="cart-divider"></div>
+            
+            <div class="cart-promo">
+                <h3>ВВЕДИТЕ ПРОМОКОД</h3>
+                <div class="promo-input-wrapper">
+                    <input type="text" placeholder="Введите промокод">
+                    <span class="promo-arrow">→</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span class="total-label">ИТОГО</span>
+                <span class="total-sum">590 ₽</span>
+            </div>
+            <button class="cart-checkout">ОФОРМИТЬ ЗАКАЗ</button>
+        </div>
+    </div>
+</div>
 
 </body>
 
