@@ -50,7 +50,7 @@
 
     </header>
 
-    <main>
+    <!-- <main>
 
         <div class="container">
 
@@ -96,8 +96,122 @@
 
         </div>
 
+    </main> -->
+
+<!-- 
+    <div class="cart-overlay">
+    <div class="cart-modal">
+        <div class="cart-header">
+            <h2><span class="cart-title">КОРЗИНА</span> / <span class="cart-count">1 шт.</span></h2>
+            <span class="cart-close">&times;</span>
+        </div>
+        
+        <div class="cart-content">
+            <div class="cart-item">
+                <img src="./assets/image/new/new2.webp" alt="Товар" class="cart-item__image">
+                <div class="cart-item__info">
+                    <p class="cart-item__category">Женская одежда</p>
+                    <h3>FOR ME BY TatarStar</h3>
+                    <p class="cart-item__variant">01.moon grass</p>
+                    <span class="cart-item__volume">Размер: M</span>
+                </div>
+                <span class="cart-item__price">590 ₽</span>
+            </div>
+            
+            <div class="cart-divider"></div>
+            
+            <div class="cart-promo">
+                <h3>ВВЕДИТЕ ПРОМОКОД</h3>
+                <div class="promo-input-wrapper">
+                    <input type="text" placeholder="Введите промокод">
+                    <span class="promo-arrow">→</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span class="total-label">ИТОГО</span>
+                <span class="total-sum">590 ₽</span>
+            </div>
+            <button class="cart-checkout">ОФОРМИТЬ ЗАКАЗ</button>
+        </div>
+    </div>
+</div> -->
+
+    <main>
+
+        <div class="container">
+
+            <div class="product" data-id="1" data-name="Платье Летнее" data-price="2500" data-image="../assets/image/new/new1.avif">
+                <img src="../assets/image/new/new1.avif" alt="Платье Летнее">
+                <h3>Платье Летнее</h3>
+                <p>2500₽</p>
+                <button class="add-to-cart">Добавить в корзину</button>
+            </div>
+
+            <div class="product" data-id="2" data-name="Костюм TatarStar" data-price="3200" data-image="../assets/image/new/new2.webp">
+                <img src="../assets/image/new/new2.webp" alt="Костюм TatarStar">
+                <h3>Костюм TatarStar</h3>
+                <p>3200₽</p>
+                <button class="add-to-cart">Добавить в корзину</button>
+            </div>
+
+            <div class="product" data-id="3" data-name="Толстовка Oversize" data-price="2900" data-image="../assets/image/new/new3.jpg">
+                <img src="../assets/image/new/new3.jpg" alt="Толстовка Oversize">
+                <h3>Толстовка Oversize</h3>
+                <p>2900₽</p>
+                <button class="add-to-cart">Добавить в корзину</button>
+            </div>
+
+            <div class="product" data-id="4" data-name="Футболка Унисекс" data-price="1800" data-image="../assets/image/new/new4.jpg">
+                <img src="../assets/image/new/new4.jpg" alt="Футболка Унисекс">
+                <h3>Футболка Унисекс</h3>
+                <p>1800₽</p>
+                <button class="add-to-cart">Добавить в корзину</button>
+            </div>
+        </div>
+        
     </main>
 
+    
+    <div class="overlay">
+        
+        <div class="header-modal">
+
+            <div class="header-modal__wrapper container">
+                
+                    <a href="#" class="header-nav__a">Главная</a>
+                    <a href="/pajes/category.html" class="header-nav__a">Каталог</a>
+                    <a href="#" class="header-nav__a">Новинки</a>
+                    <a href="#" class="header-nav__a">Контакты</a>
+                    <a href="#" class="header-nav__a">Корзина</a>
+        
+            </div>
+    
+        </div>
+        
+    </div>
+
+    <div class="cart-overlay">
+        <div class="cart-modal modal">
+            <div class="cart-header">
+                <h2>
+                    <span class="cart-title">КОРЗИНА</span> /
+                    <span class="cart-count">0</span> шт.
+                </h2>
+                <span class="cart-close close">&times;</span>
+            </div>
+
+            <div id="cart-items" class="cart-content"></div>
+
+            <div class="cart-total-block">
+                <strong>Сумма:</strong> <span id="cart-total">0</span> ₽
+            </div>
+        </div>
+    </div>
+
+    
     <footer>
         
         <div class="footer-wrapper container">
@@ -156,22 +270,5 @@
 
     </footer>
 
-    <div class="overlay">
-        
-        <div class="header-modal">
-
-            <div class="header-modal__wrapper container">
-                
-                    <a href="#" class="header-nav__a">Главная</a>
-                    <a href="/pajes/category.html" class="header-nav__a">Каталог</a>
-                    <a href="#" class="header-nav__a">Новинки</a>
-                    <a href="#" class="header-nav__a">Контакты</a>
-                    <a href="#" class="header-nav__a">Корзина</a>
-        
-            </div>
-    
-        </div>
-        
-    </div>
 </body>
 </html>
