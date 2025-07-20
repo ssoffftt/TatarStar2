@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="./assets/image/logo/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/index.js" defer></script>
+    <script src="./assets/js/cart.js" defer></script>
     <title>TatarStar</title>
 </head>
 <body>
@@ -26,7 +27,7 @@
                 <a href="#" class="header-nav__a">Главная</a>
                 <a href="./pajes/category.html" class="header-nav__a">Каталог</a>
                 <a href="#new" class="header-nav__a">Новинки</a>
-                <a href="#" class="header-nav__a">Контакты</a>
+                <a href="#footer" class="header-nav__a">Контакты</a>
                 
             </nav>
     
@@ -549,7 +550,7 @@
     
     <footer>
         
-        <div class="footer-wrapper container">
+        <div class="footer-wrapper container" id="footer">
 
             <div class="footer-col">
 
@@ -582,7 +583,7 @@
                     <a href="#" class="footer-col__a">Главная</a>
                     <a href="../pajes/category.html" class="footer-col__a">Каталог</a>
                     <a href="#new" class="footer-col__a">Новинки</a>
-                    <a href="#" class="footer-col__a">Контакты</a>
+                    <a href="#footer" class="footer-col__a">Контакты</a>
 
                 </div>
 
@@ -646,46 +647,47 @@
         </div>
 
     </div>
+    
+    <div class="modal" id="cart-modal">
 
-<div class="cart-overlay">
-    <div class="cart-modal">
-        <div class="cart-header">
-            <h2><span class="cart-title">КОРЗИНА</span> / <span class="cart-count">1 шт.</span></h2>
-            <span class="cart-close">&times;</span>
-        </div>
-        
-        <div class="cart-content">
-            <div class="cart-item">
-                <img src="./assets/image/new/new2.webp" alt="Товар" class="cart-item__image">
-                <div class="cart-item__info">
-                    <p class="cart-item__category">Женская одежда</p>
-                    <h3>FOR ME BY TatarStar</h3>
-                    <p class="cart-item__variant">01.moon grass</p>
-                    <span class="cart-item__volume">Размер: M</span>
-                </div>
-                <span class="cart-item__price">590 ₽</span>
+        <div class="modal-content">
+
+            <div class="cart-header">
+                <h2><span class="cart-title">КОРЗИНА</span> / <span class="cart-count">1 шт.</span></h2>
+                <span class="close">&times;</span>
             </div>
-            
-            <div class="cart-divider"></div>
-            
+
+            <div id="cart-items">
+                <!-- все что в js -->
+            </div>
+
             <div class="cart-promo">
                 <h3>ВВЕДИТЕ ПРОМОКОД</h3>
                 <div class="promo-input-wrapper">
-                    <input type="text" placeholder="Введите промокод">
+                    <input type="text" placeholder="Введите промокод" required>
                     <span class="promo-arrow">→</span>
                 </div>
+                <!-- валидация -->
             </div>
-        </div>
-        
-        <div class="cart-footer">
-            <div class="cart-total">
-                <span class="total-label">ИТОГО</span>
-                <span class="total-sum">590 ₽</span>
+
+            <div class="cart-total-test">
+            Общая стоимость:
+                <h5>
+                    <span id="cart-total">0</span>
+                    $
+                </h5>
             </div>
-            <button class="cart-checkout">ОФОРМИТЬ ЗАКАЗ</button>
+            
+
+            <div class="cart-footer">
+                
+                <button class="cart-checkout">ОФОРМИТЬ ЗАКАЗ</button>
+
+            </div>
+
         </div>
+
     </div>
-</div>
 
 </body>
 

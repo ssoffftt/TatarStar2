@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="shortcut icon" href="../assets/image/logo/favicon.svg" type="image/x-icon">
-    <script src="../assets/js/index.js" defer></script>
+    <script src="../assets/js/cart.js" defer></script> 
     <title>Catalog</title>
 </head>
 
@@ -27,13 +27,13 @@
                 <a href="../index.html" class="header-nav__a">Главная</a>
                 <a href="#" class="header-nav__a">Каталог</a>
                 <a href="../index.html#new" class="header-nav__a">Новинки</a>
-                <a href="#" class="header-nav__a">Контакты</a>
+                <a href="#footer" class="header-nav__a">Контакты</a>
                 
             </nav>
     
             <div class="header-icons">
     
-                <a href="#" class="header-icon">
+                <a href="#" class="cart-icon">
                     <i class="fa-solid fa-basket-shopping fa-xl" style="color: #000000;"></i>
                 </a>
         
@@ -50,121 +50,32 @@
 
     </header>
 
-    <!-- <main>
-
-        <div class="container">
-
-            <a href="./category.html"><div class="catalog-back">
-
-                <i class="fa-solid fa-chevron-left" style="color: #000000;"></i>
-
-                <span>Назад</span>
-
-            </div></a>
-
-            <div class="products">
-
-        
-        <div class="product" data-id="1" data-name="Товар1" data-price="100" data-image="new7.jpg">
-            
-            <img class="product-img" src="../assets/image/new/new3.jpg" alt="img" loading="lazy"="">
-            <h3>Товар1</h3>
-            <p>Цена: 100$</p>
-            <button class="add-to-cart">Купить</button>
-
-        </div>
-
-        <div class="product" data-id="2" data-name="Товар2" data-price="200" data-image="new7.jpg">
-            
-            <img class="product-img" src="../assets/image/new/new4.jpg" alt="img" loading="lazy"="">
-            <h3>Товар2</h3>
-            <p>Цена: 100$</p>
-            <button class="add-to-cart">Купить</button>
-
-        </div>
-
-        <div class="product" data-id="2" data-name="Товар3" data-price="300" data-image="new7.jpg">
-            
-            <img class="product-img" src="../assets/image/new/new5.jpg" alt="img" loading="lazy"="">
-            <h3>Товар3</h3>
-            <p>Цена: 100$</p>
-            <button class="add-to-cart">Купить</button>
-
-        </div>
-
-    </div>
-
-        </div>
-
-    </main> -->
-
-<!-- 
-    <div class="cart-overlay">
-    <div class="cart-modal">
-        <div class="cart-header">
-            <h2><span class="cart-title">КОРЗИНА</span> / <span class="cart-count">1 шт.</span></h2>
-            <span class="cart-close">&times;</span>
-        </div>
-        
-        <div class="cart-content">
-            <div class="cart-item">
-                <img src="./assets/image/new/new2.webp" alt="Товар" class="cart-item__image">
-                <div class="cart-item__info">
-                    <p class="cart-item__category">Женская одежда</p>
-                    <h3>FOR ME BY TatarStar</h3>
-                    <p class="cart-item__variant">01.moon grass</p>
-                    <span class="cart-item__volume">Размер: M</span>
-                </div>
-                <span class="cart-item__price">590 ₽</span>
-            </div>
-            
-            <div class="cart-divider"></div>
-            
-            <div class="cart-promo">
-                <h3>ВВЕДИТЕ ПРОМОКОД</h3>
-                <div class="promo-input-wrapper">
-                    <input type="text" placeholder="Введите промокод">
-                    <span class="promo-arrow">→</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="cart-footer">
-            <div class="cart-total">
-                <span class="total-label">ИТОГО</span>
-                <span class="total-sum">590 ₽</span>
-            </div>
-            <button class="cart-checkout">ОФОРМИТЬ ЗАКАЗ</button>
-        </div>
-    </div>
-</div> -->
-
     <main>
 
         <div class="products-container">
 
-            <div class="product" data-id="1" data-name="Платье Летнее" data-price="2500" data-image="../assets/image/new/new1.avif">
+            <div class="product" data-id="1" data-name="Платье Летнее" data-price="2500" data-image="../assets/image/new/new1.avif" data-category="Женская коллекция" data-color="0.1 moon grass" data-size="M">
                 <img src="../assets/image/new/new1.avif" alt="Платье Летнее">
                 <h3>Платье Летнее</h3>
                 <p>2500₽</p>
                 <button class="add-to-cart">Добавить в корзину</button>
             </div>
 
-            <div class="product" data-id="2" data-name="Костюм TatarStar" data-price="3200" data-image="../assets/image/new/new2.webp">
+            <div class="product" data-id="2" data-name="Костюм TatarStar" data-price="3200" data-image="../assets/image/new/new2.webp" data-category="Женская коллекция" data-color="0.2 moon grass" data-size="XL">
                 <img src="../assets/image/new/new2.webp" alt="Костюм TatarStar">
                 <h3>Костюм TatarStar</h3>
                 <p>3200₽</p>
                 <button class="add-to-cart">Добавить в корзину</button>
             </div>
 
-            <div class="product" data-id="3" data-name="Толстовка Oversize" data-price="2900" data-image="../assets/image/new/new3.jpg">
+            <div class="product" data-id="3" data-name="Толстовка Oversize" data-price="2900" data-image="../assets/image/new/new3.jpg" data-category="Мужская коллекция" data-color="0.3 moon grass" data-size="S">
                 <img src="../assets/image/new/new3.jpg" alt="Толстовка Oversize">
                 <h3>Толстовка Oversize</h3>
                 <p>2900₽</p>
                 <button class="add-to-cart">Добавить в корзину</button>
             </div>
 
-            <div class="product" data-id="4" data-name="Футболка Унисекс" data-price="1800" data-image="../assets/image/new/new4.jpg">
+            <div class="product" data-id="4" data-name="Футболка Унисекс" data-price="1800" data-image="../assets/image/new/new4.jpg" data-category="Мужская коллекция" data-color="0.4 moon grass" data-size="L">
                 <img src="../assets/image/new/new4.jpg" alt="Футболка Унисекс">
                 <h3>Футболка Унисекс</h3>
                 <p>1800₽</p>
@@ -173,7 +84,6 @@
         </div>
 
     </main>
-
     
     <div class="overlay">
         
@@ -193,25 +103,47 @@
         
     </div>
 
-    <div class="cart-overlay">
-        <div class="cart-modal modal">
+    <div class="modal" id="cart-modal">
+
+        <div class="modal-content">
+
             <div class="cart-header">
-                <h2>
-                    <span class="cart-title">КОРЗИНА</span> /
-                    <span class="cart-count">0</span> шт.
-                </h2>
-                <span class="cart-close close">&times;</span>
+                <h2><span class="cart-title">КОРЗИНА</span> / <span class="cart-count">1 шт.</span></h2>
+                <span class="close">&times;</span>
             </div>
 
-            <div id="cart-items" class="cart-content"></div>
-
-            <div class="cart-total-block">
-                <strong>Сумма:</strong> <span id="cart-total">0</span> ₽
+            <div id="cart-items">
+                <!-- все что в js -->
             </div>
+
+            <div class="cart-promo">
+                <h3>ВВЕДИТЕ ПРОМОКОД</h3>
+                <div class="promo-input-wrapper">
+                    <input type="text" placeholder="Введите промокод" required>
+                    <span class="promo-arrow">→</span>
+                </div>
+                <!-- валидация -->
+            </div>
+
+            <div class="cart-total-test">
+            Общая стоимость:
+                <h5>
+                    <span id="cart-total">0</span>
+                    $
+                </h5>
+            </div>
+            
+
+            <div class="cart-footer">
+                
+                <button class="cart-checkout">ОФОРМИТЬ ЗАКАЗ</button>
+
+            </div>
+
         </div>
+
     </div>
 
-    
     <footer>
         
         <div class="footer-wrapper container">

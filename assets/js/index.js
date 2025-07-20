@@ -3,8 +3,10 @@ const init = () => {
     openModal ()
     swiper()
     headerBcc()
-    initCartModal(); 
+    // initCartModal(); 
 }
+
+document.addEventListener('DOMContentLoaded', init);
 
 
 const headerModal = () => {
@@ -73,7 +75,6 @@ const headerBcc = () => {
     })
 
 }
-document.addEventListener('DOMContentLoaded', init);
 
 function openModal() {
     const overlayModal = document.querySelector('.popup-overlay')
@@ -156,4 +157,83 @@ const initCartModal = () => {
     });
 };
 
+let cart = []
 
+const cartModal = document.querySelector('.modal') 
+const cartItems = document.querySelector('#cart-items')
+const cartCount = document.querySelector('.cart-count')
+const cartTotal = document.querySelector('#cart-total')
+const cartIcon = document.querySelector('.cart-icon')
+const closeBtn = document.querySelector('.close')
+
+// cartIcon.addEventListener('click', () => {
+//     cartModal.style.display = 'block'
+// })
+
+// closeBtn.addEventListener('click', () => {
+//     cartModal.style.display = 'none'
+// })
+
+const buttons = document.querySelectorAll('.add-to-cart')
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        const product = button.closest('.product')
+        const id = product.dataset.id
+        const name = product.dataset.name
+        const price = parseFloat(product.dataset.price)
+        const image = product.dataset.image
+
+        const existingItem = cart.find(item => item.id === id)
+        if (existingItem) {
+            existingItem.quantity++
+        } else {
+            cart.push({
+                id,
+                name,
+                price,
+                quantity: 1,
+                image
+            })
+        }
+
+        updateCart()
+    })
+})
+
+function updateCart() {
+    cartItems.innerHTML = ''
+
+    let total = 0
+    let count = 0
+
+    cart.forEach(item  => {
+        const itemTotal = item.price * item.quantity
+        total += itemTotal
+        count += item.quantity
+        const cartItemElement = document.createElement('div')
+        cartItemElement.classList.add('cart-item')
+        cartItemElement.innerHTML = `
+            <img src="${item.image}" alt="${item.name}">
+            <div class="item-info">
+                <h3>${item.name}</h3>
+                <p>${item.quantity} x ${item.price}= ${itemTotal}</p>
+            </div>
+            <button class="remove-btn" data-id="${item.id}">Удалить</button>
+        `
+
+        cartItems.appendChild(cartItemElement)
+    })
+
+    cartCount.textContent = count
+    cartTotal.textContent = total
+
+    const removeBtns = document.querySelectorAll('.remove-btn')
+    removeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const id = btn.dataset.id 
+            cart = cart.filter(item => item.id !== id)
+            updateCart()
+        })
+    })
+}
